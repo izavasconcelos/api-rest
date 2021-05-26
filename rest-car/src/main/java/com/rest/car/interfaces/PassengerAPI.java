@@ -21,7 +21,7 @@ public class PassengerAPI {
     public PassengerRepository passengerRepository;
 
     @GetMapping()
-    public List<Passenger> listPassenger() {
+    public List<Passenger> listPassengers() {
         return passengerRepository.findAll();
     }
 
