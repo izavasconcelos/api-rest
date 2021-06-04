@@ -1,4 +1,4 @@
-package com.rest.car.interfaces.input;
+package com.rest.car.interfaces.incoming.input;
 
 import lombok.Data;
 

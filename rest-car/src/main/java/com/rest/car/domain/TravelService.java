@@ -1,7 +1,5 @@
 package com.rest.car.domain;
 
-import com.rest.car.interfaces.TravelRequest;
-import com.rest.car.interfaces.TravelRequestRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

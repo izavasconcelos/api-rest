@@ -1,4 +1,4 @@
-package com.rest.car.interfaces;
+package com.rest.car.interfaces.incoming;
 
 import com.rest.car.domain.Driver;
 import com.rest.car.domain.DriverRepository;

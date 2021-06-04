@@ -1,4 +1,4 @@
-package com.rest.car.interfaces.output;
+package com.rest.car.interfaces.incoming.output;
 
 import com.rest.car.domain.TravelRequestStatus;
 import lombok.Data;

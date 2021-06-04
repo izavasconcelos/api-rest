@@ -1,9 +1,12 @@
-package com.rest.car.interfaces;
+package com.rest.car.interfaces.incoming;
 
+import com.rest.car.domain.TravelRequest;
 import com.rest.car.domain.TravelService;
-import com.rest.car.interfaces.input.TravelRequestInput;
-import com.rest.car.interfaces.mapping.TravelRequestMapper;
+import com.rest.car.interfaces.incoming.input.TravelRequestInput;
+import com.rest.car.interfaces.incoming.mapping.TravelRequestMapper;
+import com.rest.car.interfaces.incoming.output.TravelRequestOutput;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.EntityModel;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,7 +26,10 @@ public class TravelRequestAPI {
     private TravelRequestMapper mapper;
 
     @PostMapping
-    public void makeTravelRequest(@RequestBody TravelRequestInput travelRequestInput) {
-        travelService.saveTravelRequest(mapper.map(travelRequestInput));
+    public EntityModel<TravelRequestOutput> makeTravelRequest(@RequestBody TravelRequestInput travelRequestInput) {
+        TravelRequest request = travelService.saveTravelRequest(mapper.map(travelRequestInput));
+        TravelRequestOutput output = mapper.map(request);
+
+        return mapper.buildOutputModel(request, output);
     }
 }

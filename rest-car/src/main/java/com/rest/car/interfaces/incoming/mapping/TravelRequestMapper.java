@@ -1,11 +1,11 @@
-package com.rest.car.interfaces.mapping;
+package com.rest.car.interfaces.incoming.mapping;
 
 import com.rest.car.domain.Passenger;
 import com.rest.car.domain.PassengerRepository;
-import com.rest.car.interfaces.PassengerAPI;
-import com.rest.car.interfaces.TravelRequest;
-import com.rest.car.interfaces.input.TravelRequestInput;
-import com.rest.car.interfaces.output.TravelRequestOutput;
+import com.rest.car.interfaces.incoming.PassengerAPI;
+import com.rest.car.domain.TravelRequest;
+import com.rest.car.interfaces.incoming.input.TravelRequestInput;
+import com.rest.car.interfaces.incoming.output.TravelRequestOutput;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.Link;

@@ -1,4 +1,4 @@
-package com.rest.car.interfaces;
+package com.rest.car.interfaces.incoming;
 
 import com.rest.car.domain.Passenger;
 import com.rest.car.domain.PassengerRepository;
